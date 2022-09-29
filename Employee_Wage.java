@@ -6,6 +6,7 @@ public class Employee_Wage {
 	static int isPresent;
 	static int wage_Per_Hour = 20;
 	static int full_Day_Hour = 8;
+	static int part_Time_Hour = 8;
 
 	public static void main(String[] args) {
 
@@ -20,10 +21,12 @@ public class Employee_Wage {
 		}
 
 		// Calculate daily employee wage
-		
+
 		int dailyWage = 0;
 		dailyWage = full_Day_Hour * wage_Per_Hour;
-		
+		dailyWage = part_Time_Hour * wage_Per_Hour;
+
 		System.out.println("Daily wage of Employee is " + dailyWage);
+		System.out.println("Employee is Part Time");
 	}
 }
