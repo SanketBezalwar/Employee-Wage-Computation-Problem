@@ -61,5 +61,30 @@ public class Employee_Wage {
 		monthlyWage = dailyWage2 * monthDays;
 		System.out.println("Monthly wage of part time Employee is " + monthlyWage);
 
+		// Wages till hours or days is reached
+
+		int isWorking;
+		int monthlyWage2 = 0;
+		int workingDays = 0;
+		int workingHours = 0;
+
+		while (workingHours <= 100 && workingDays <= 20) {
+			isWorking = inp.nextInt(2);
+			workingDays = workingDays + 1;
+
+			switch (isWorking) {
+			case 0:
+				monthlyWage2 = monthlyWage2 + wage_Per_Hour * 4;
+				workingHours = workingHours + 4;
+				break;
+
+			case 1:
+				monthlyWage2 = monthlyWage2 + wage_Per_Hour * 8;
+				workingHours = workingHours + 8;
+				break;
+			}
+		}
+
+		System.out.println("Employee wage for total working hours is " + monthlyWage2);
 	}
 }
