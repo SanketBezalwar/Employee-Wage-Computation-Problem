@@ -67,6 +67,7 @@ public class Employee_Wage {
 		int maxWorkHours = 0;
 
 		while (maxWorkHours <= 100 && maxWorkDays <= 20) {
+			maxWorkDays++;
 
 			Random inp = new Random();
 			isWorking = inp.nextInt(2);
